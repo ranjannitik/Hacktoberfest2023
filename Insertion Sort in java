@@ -1,0 +1,29 @@
+public class sorting { // INSERTION Sorting
+    public static void ins(int arr[]) {
+        for (int i = 0; i < arr.length; i++) {
+            int temp = arr[i];
+            int pre = i - 1;
+            int j = pre;
+            while (j > -1 && arr[j] > temp) {
+                arr[j + 1] = arr[j];
+                arr[j] = temp;
+                j--;
+
+            }
+
+        }
+    }
+
+    public static void print(int arr[]) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + ",");
+        }
+        System.out.println();
+    }
+
+    public static void main(String args[]) {
+        int arr[] = { 1, 5, 4, 2, 3, 6, 9, 7, 8 };
+        ins(arr);
+        print(arr);
+    }
+}
